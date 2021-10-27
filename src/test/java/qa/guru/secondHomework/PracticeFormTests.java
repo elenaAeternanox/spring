@@ -46,7 +46,7 @@ public class PracticeFormTests {
             rowStudentEmail = "Student Email",
             rowGender = "Gender",
             rowMobile = "Mobile",
-            rowDateOfBirth= "Date of Birth",
+            rowDateOfBirth = "Date of Birth",
             rowSubjects = "Subjects",
             rowHobbies = "Hobbies",
             rowPicture = "Picture",
@@ -121,7 +121,7 @@ public class PracticeFormTests {
         //Check the result form isn't displayed
         $("#modal-dialog").shouldNotBe(visible);
         $("#practice-form-wrapper").isDisplayed();
-        }
+    }
 
     private void checkTable(String parameterName, String parameterValue) {
         $$(".table-responsive tr").filterBy(text(parameterName)).shouldHave(texts(parameterValue));
