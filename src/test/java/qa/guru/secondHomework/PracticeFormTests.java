@@ -9,11 +9,9 @@ import java.io.File;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.CollectionCondition.texts;
+import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeFormTests {
 
@@ -65,6 +63,7 @@ public class PracticeFormTests {
     void fillFormTest() {
         open("https://demoqa.com/automation-practice-form");
 
+        //Set first name, last name, email, gender and phone number
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(email);
@@ -105,22 +104,26 @@ public class PracticeFormTests {
         //Check the result form after submit
         $("#modal-dialog").isDisplayed();
         $("#example-modal-sizes-title-lg").shouldHave(text(WELCOME_MESSAGE));
-        $$(".table-responsive tr").filterBy(text(rowStudentName)).shouldHave(texts(firstName + ' ' + lastName));
-        $$(".table-responsive tr").filterBy(text(rowStudentEmail)).shouldHave(texts(email));
-        $$(".table-responsive tr").filterBy(text(rowGender)).shouldHave(texts(genderMale));
-        $$(".table-responsive tr").filterBy(text(rowMobile)).shouldHave(texts(phoneNumber));
-        $$(".table-responsive tr").filterBy(text(rowDateOfBirth)).shouldHave(texts(birthdayDay + " " + birthdayMonth + "," + birthdayYear));
-        $$(".table-responsive tr").filterBy(text(rowSubjects)).shouldHave(texts(firstSubject + ", " + secondSubject));
-        $$(".table-responsive tr").filterBy(text(rowHobbies)).shouldHave(texts(hobbieSport + ", " + hobbieRead + ", " + hobbieMusic));
-        $$(".table-responsive tr").filterBy(text(rowPicture)).shouldHave(texts(fileName));
-        $$(".table-responsive tr").filterBy(text(rowAddress)).shouldHave(texts(currentAddress));
-        $$(".table-responsive tr").filterBy(text(rowStateAndCity)).shouldHave(texts(state + " " + city));
+
+        checkTable(rowStudentName, firstName + ' ' + lastName);
+        checkTable(rowStudentEmail, email);
+        checkTable(rowGender, genderMale);
+        checkTable(rowMobile, phoneNumber);
+        checkTable(rowDateOfBirth, birthdayDay + " " + birthdayMonth + "," + birthdayYear);
+        checkTable(rowSubjects, firstSubject + ", " + secondSubject);
+        checkTable(rowHobbies, hobbieSport + ", " + hobbieRead + ", " + hobbieMusic);
+        checkTable(rowPicture, fileName);
+        checkTable(rowAddress, currentAddress);
+        checkTable(rowStateAndCity, state + " " + city);
 
         $("#closeLargeModal").click();
 
         //Check the result form isn't displayed
         $("#modal-dialog").shouldNotBe(visible);
         $("#practice-form-wrapper").isDisplayed();
+        }
 
+    private void checkTable(String parameterName, String parameterValue) {
+        $$(".table-responsive tr").filterBy(text(parameterName)).shouldHave(texts(parameterValue));
     }
 }
