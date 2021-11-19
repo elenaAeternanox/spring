@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class PracticeFormTests {
 
     private final static String WELCOME_MESSAGE = "Thanks for submitting the form";
+    private final static String URL_PRACTICE_FORM = "https://demoqa.com/automation-practice-form";
 
     //the variables for setting form
     private String firstName = "Ivan",
@@ -61,7 +62,7 @@ public class PracticeFormTests {
     @Test
     @DisplayName("Check Practice form on the 'https://demoqa.com/automation-practice-form' page")
     void fillFormTest() {
-        open("https://demoqa.com/automation-practice-form");
+        open(URL_PRACTICE_FORM);
 
         //Set first name, last name, email, gender and phone number
         $("#firstName").setValue(firstName);
