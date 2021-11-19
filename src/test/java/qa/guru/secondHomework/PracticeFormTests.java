@@ -62,7 +62,7 @@ public class PracticeFormTests {
     @Test
     @DisplayName("Check Practice form on the 'https://demoqa.com/automation-practice-form' page")
     void fillFormTest() {
-        open(URL);
+        open(URL_PRACTICE_FORM);
 
         //Set first name, last name, email, gender and phone number
         $("#firstName").setValue(firstName);
