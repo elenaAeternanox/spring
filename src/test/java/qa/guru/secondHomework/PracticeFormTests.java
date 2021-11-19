@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class PracticeFormTests {
 
     private final static String WELCOME_MESSAGE = "Thanks for submitting the form";
-    private final static String URL = "https://demoqa.com/automation-practice-form";
+    private final static String URL_PRACTICE_FORM = "https://demoqa.com/automation-practice-form";
 
     //the variables for setting form
     private String firstName = "Ivan",
