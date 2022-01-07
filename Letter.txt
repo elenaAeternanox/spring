@@ -1,0 +1,27 @@
+Hello!
+My name's Elena Komarova and I'm interested so much in vacancy "Senior QA engineer", which you've published in telegram channel.
+Now I'm working in position Senior QA (Full stack QA) engineer in Prague. But I'd like to move to Amsterdam. 
+I have been working in QA manual for 8 years and in QA full stack for 1,5 years. Also I'm studying on qa.guru course for QA automation.
+
+I have experience with follow qa automation technologies:
+Java
+Maven, Gradle
+Selenium, Selenoid
+JUnit5
+Git
+Allure Report and Allure TestOps
+Jenkins, Teamcity
+Jira, Wrike
+SQL
+Also I have experience for manual and automation testing of Frontend and Backend. 
+
+I suggest you to familiarize yourself with project, which I've special prepared the project for testing website of your company
+https://github.com/elenaAeternanox/itfinland_project
+I hope it will interest you and we will continue our communication for further collaboration.
+
+---
+Regard, Elena Komarova
+
+antares87@mail.ru
++420-603-334-648
+https://www.linkedin.com/in/elena-komarova-b728041b8/

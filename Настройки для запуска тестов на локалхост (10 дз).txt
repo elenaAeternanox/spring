@@ -1,0 +1,11 @@
+ @BeforeAll
+    public static void setup() {
+        System.setProperty("selenoid.url", "http://localhost:4444/wd/hub");
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        Configuration.startMaximized = true;
+
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+
+        Configuration.remote = System.getProperty("selenoid.url");
+        capabilities.setCapability("enableVNC", true);

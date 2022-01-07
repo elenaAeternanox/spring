@@ -1,0 +1,3 @@
+Сгенерированный проект
+https://github.com/autotests-cloud/AUTO-527/tree/master/src/test/java/cloud/autotests/config/demowebshop
+
