@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'quru.qa'
+group = 'guru.qa'
 version = '0.0.1'
 sourceCompatibility = '1.8'
 
